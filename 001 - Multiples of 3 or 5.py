@@ -1,6 +1,9 @@
+def sum_divisible_by(n):
+    last = 999 // n
+    return n * last * (last + 1) // 2
+
 def solve():
-    ans = sum(x for x in range(1000) if x%3==0 or x%5==0)
-    return ans
+    return sum_divisible_by(3) + sum_divisible_by(5) - sum_divisible_by(15)
 
 if __name__ == "__main__":
     print(solve())
