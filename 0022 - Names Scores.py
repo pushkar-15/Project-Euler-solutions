@@ -518,9 +518,9 @@ NAMES = [  # 10 strings per line, except final line
 	"DARELL", "BRODERICK", "ALONSO",
 ]
 
-def compute():
+def solve():
 	return sum((i + 1) * (ord(c) - ord('A') + 1) 
 		   for (i, name) in enumerate(sorted(NAMES)) for c in name)
 
 if __name__ == "__main__":
-	print(compute())
+	print(solve())
