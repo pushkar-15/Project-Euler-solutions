@@ -9,13 +9,11 @@ def solve():
 		if is_triangular(sum((ord(c) - ord('A') + 1) for c in w)))
 
 def is_triangular(t):
-	temp = 0
-	for i in itertools.count():
-		temp += i
-		if t == temp: return True
-		elif t < temp: return False
+	# checks if inverse function of f(t) = t = n*(n+1)/2 is an integer
+	return (math.sqrt(1 + 8*t) - 1) / 2 % 1 == 0
 
 if __name__ == "__main__":
 	s = time.time()
 	print(solve())
 	print(time.time() - s, "seconds")
+
